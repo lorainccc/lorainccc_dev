@@ -1,6 +1,7 @@
 /*!
 Section 5: Navigation
 */
+
 header nav a,header nav a:hover {
     color: #fefefe;
     font-size: .875rem;
@@ -19,7 +20,7 @@ header .menu:not(#header-menu):not(.vertical) li:hover,header .dropdown.menu .su
 }
 
 header li.is-submenu-item {
-    padding: .5rem 0;
+    padding: .1rem 0;
     border-top: 1px solid #0055a5
 }
 
@@ -42,7 +43,7 @@ header .dropdown.menu .submenu li:hover a {
 
 header li.is-submenu-item:not(.is-drilldown-submenu-item) a {
     color: #fefefe;
-    font-size: .75rem
+    font-size: .85rem
 }
 
 header li.is-drilldown-submenu-item {
@@ -233,6 +234,8 @@ li.divider:after {
 }
 
 .main-navigation li {
+    border-top: 1px solid #eaeaea;
+    border-top: 1px solid rgba(51,51,51,0.1);
     position: relative;
     min-height: 40px
 }
@@ -328,111 +331,12 @@ ul.nav-menu li.current-menu-item ul.sub-menu {
     display: none
 }
 
-.alignnone {
-    margin: 5px 20px 20px 0
+.menu-navigation-container ul.nav-menu {
+    margin: 41px 0 0 0
 }
 
-.aligncenter,div.aligncenter {
+.current-menu-item.menu-item-has-children ul .toggled-on {
     display: block;
-    margin: 5px auto 5px auto
-}
-
-.alignright {
-    float: right;
-    margin: 5px 0 20px 20px
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px
-}
-
-a img.alignnone {
-    margin: 5px 20px 20px 0
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0
-}
-
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%;
-    padding: 5px 3px 10px;
-    text-align: center
-}
-
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px
-}
-
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto
-}
-
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px
-}
-
-.screen-reader-text {
-    clip: rect(1px,1px,1px,1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden
-}
-
-.screen-reader-text:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
-    clip: auto !important;
-    color: #21759b;
-    display: block;
-    font-size: 14px;
-    font-size: .875rem;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000
-}
-
-.current-menu-item.menu-item-has-children ul {
-    display: block
 }
 
 .clear:before,.clear:after,.site:before,.site:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-content:before,.site-content:after,.nav-links:before,.nav-links:after,.comment-navigation:before,.comment-navigation:after,.social-navigation ul:before,.social-navigation ul:after,.textwidget:before,.textwidget:after {
@@ -446,4 +350,8 @@ a img.aligncenter {
 
 ul.sub-menu {
     padding-top: 15px
+}
+
+nav#site-navigation {
+    padding-bottom: 20px;
 }

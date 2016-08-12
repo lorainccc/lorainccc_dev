@@ -14,11 +14,17 @@ get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-  <div class="home-hero">
+  <?php if ( is_active_sidebar( 'homepage-slider-sidebar' ) ) { ?>
+
+						<?php dynamic_sidebar( 'homepage-slider-sidebar' ); ?>
+
+			<?php }else{ ?>
+			<div class="home-hero">
     <div class="row">
 				&nbsp;
-		</div>
+			</div>
   </div>
+  <?php } ?>
   <section class="cta-icons">
     <div class="row icon-container">
 					<?php if ( is_active_sidebar( 'cta-icons-sidebar' ) ) { ?>
