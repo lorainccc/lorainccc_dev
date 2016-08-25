@@ -23,7 +23,11 @@
       <a href="#" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
       <h2>LCCC'S<br />
         Mobile App</h2>
-      </a> </div>
+      </a>
+     <p class="website-feedback">
+      <a href="/website-feedback?siteurl=<?php echo get_permalink(); ?>" target="_blank">Feedback about this page</a>
+     </p>
+     </div>
    <div class="large-3 medium-3 columns">
       <h2>Contact LCC</h2>
       <p>1005 N Abbe Rd<br />
@@ -53,7 +57,7 @@
     </div>
     <div class="large-3 medium-3 columns">
       <h2>Quick Links</h2>
-	<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
+	<?php if ( has_nav_menu( 'footer-quicklinks-nav' ) ) : ?>
 		<nav id="site-navigation" class="footer-navigation" role="navigation">
 			<?php
 				// Primary Footer navigation menu.

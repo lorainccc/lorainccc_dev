@@ -179,8 +179,8 @@ add_action( 'widgets_init', 'lorainccc_widgets_init' );
  */
 function add_google_fonts() {
 wp_enqueue_style( 'open-sans-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic', false );
-wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false ); 	
-	
+wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
