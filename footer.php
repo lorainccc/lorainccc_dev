@@ -25,11 +25,11 @@
         Mobile App</h2>
       </a>
      <p class="website-feedback">
-      <a href="/website-feedback?siteurl=<?php echo get_permalink(); ?>" target="_blank">Feedback about this page</a>
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" target="_blank">Feedback about this page</a>
      </p>
      </div>
    <div class="large-3 medium-3 columns">
-      <h2>Contact LCC</h2>
+      <h2>Contact LCCC</h2>
       <p>1005 N Abbe Rd<br />
         Elyria, OH 44035<br />
         1-800-995-LCCC (5222)<br />
