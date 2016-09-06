@@ -107,14 +107,14 @@ get_header(); ?>
 								<?php
 								echo '<h3>'.$spring_start_display.' to '.$spring_end_display.'</h3>';?>
 								</div>
-															<table>
+																						<table>
 							<tbody>
 								<?php
 										$springeventargs=array(
             'post_type' => 'lccc_academicevent',
 		    						'posts_per_page' => -1,
-		    						'order'=> 'ASC',
-												'cat' => 'spring-semester-2016-2017',
+		    						'order' => 'ASC',
+												'event-categories' => 'spring-semester-2016-2017',
     		    		'orderby'=> 'meta_value',
     		    		'meta_key' => 'event_start_date',
           );
@@ -124,18 +124,23 @@ get_header(); ?>
 								$date = academic_event_metabox_get_meta('event_start_date');
 								$datevar = strtotime($date);
 								$dayofweek =	date("l",$datevar);
+										$displaydate = date("F d, Y",$datevar);
+								if( $date >= $spring_start && $date <= $spring_end){
 								?>
 													<tr>
 														<td><?php the_title(); ?></td>  
 														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $date; ?></td>
+														<td><?php echo $displaydate; ?></td>
 													</tr>
 										<?php
+								}
 								endwhile;
-					endif;
+					wp_reset_postdata();
+								endif;
 								?>
 						</tbody>
 					</table>
+	
   </div>
 						  <div class="tabs-panel  <?php echo $summeractive; ?>" id="summer-semester-calendar">
 										<div class="small-12 medium-12 columns nopadding">
@@ -143,14 +148,14 @@ get_header(); ?>
 											<?php
 								echo '<h3>'.$summer_start_display.' to '.$summer_end_display.'</h3>';?>
 									</div>
-																<table>
+																			<table>
 							<tbody>
 								<?php
 										$summereventargs=array(
             'post_type' => 'lccc_academicevent',
 		    						'posts_per_page' => -1,
 		    						'order'=> 'ASC',
-											'cat' => 'summer-semester-2016-2017',
+											'event-categories' => 'summer-semester-2016-2017',
     		    		'orderby'=> 'meta_value',
     		    		'meta_key' => 'event_start_date',
           );
@@ -160,15 +165,19 @@ get_header(); ?>
 								$date = academic_event_metabox_get_meta('event_start_date');
 								$datevar = strtotime($date);
 								$dayofweek =	date("l",$datevar);
+							 $displaydate = date("F d, Y",$datevar);
+										if( $date >= $summer_start && $date <= $summer_end){
 								?>
 													<tr>
 														<td><?php the_title(); ?></td>  
 														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $date; ?></td>
+														<td><?php echo $displaydate; ?></td>
 													</tr>
 										<?php
+										}
 								endwhile;
-					endif;
+					wp_reset_postdata();
+								endif;
 								?>
 						</tbody>
 					</table>
@@ -185,8 +194,8 @@ get_header(); ?>
 										$eventargs=array(
             'post_type' => 'lccc_academicevent',
 		    						'posts_per_page' => -1,
-		    						'order'=> 'ASC',
-												'cat' => 'fall-semester-2016-2017',
+		    						'order' => 'ASC',
+												'event_categories' => 'fall-semester-2016-2017',
     		    		'orderby'=> 'meta_value',
     		    		'meta_key' => 'event_start_date',
           );
@@ -196,15 +205,17 @@ get_header(); ?>
 								$date = academic_event_metabox_get_meta('event_start_date');
 								$datevar = strtotime($date);
 								$dayofweek =	date("l",$datevar);
+								$displaydate = date("F d, Y",$datevar);
 								?>
 													<tr>
 														<td><?php the_title(); ?></td>  
 														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $date; ?></td>
+														<td><?php echo $displaydate; ?></td>
 													</tr>
 										<?php
 								endwhile;
-					endif;
+								wp_reset_postdata();
+							endif;
 								?>
 						</tbody>
 					</table>

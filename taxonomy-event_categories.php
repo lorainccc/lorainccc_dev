@@ -65,10 +65,11 @@ get_header(); ?>
 <?php 
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
+			echo $term->slug;	
 			$args = array(
-    'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
+				'posts_per_page' => -1,
     'order'=> 'ASC',
     'orderby'=> 'meta_value',
     'meta_key' => 'event_start_date',
@@ -143,7 +144,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         echo '<div class="small-12 medium-12 large-12 columns calender">';                
+         echo '<div class="small-12 medium-12 large-12 columns calendar">';                
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';
