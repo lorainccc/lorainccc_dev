@@ -114,26 +114,36 @@ get_header(); ?>
             'post_type' => 'lccc_academicevent',
 		    						'posts_per_page' => -1,
 		    						'order' => 'ASC',
-												'event-categories' => 'spring-semester-2016-2017',
+												'event_categories' => 'spring-semester-2016-2017',
     		    		'orderby'=> 'meta_value',
     		    		'meta_key' => 'event_start_date',
           );
+					
 					$spring_wp_query = new WP_Query($springeventargs);
 					if ( $spring_wp_query->have_posts() ) :
 								while ( $spring_wp_query->have_posts() ) : $spring_wp_query->the_post();
-								$date = academic_event_metabox_get_meta('event_start_date');
-								$datevar = strtotime($date);
-								$dayofweek =	date("l",$datevar);
-										$displaydate = date("F d, Y",$datevar);
-								if( $date >= $spring_start && $date <= $spring_end){
+								$spdate = academic_event_metabox_get_meta('event_start_date');
+								$spdatevar = strtotime($spdate);
+								$spdayofweek =	date("l",$spdatevar);
+								$spdisplaydate = date("F d, Y",$spdatevar);
+								$spdatewithoutyear =	date("F d ",$spdatevar);
+								$spenddate = academic_event_metabox_get_meta('event_end_date');
+								$spenddatevar = strtotime($spenddate);
+								$spenddayofweek =	date("l",$spenddatevar);
+							 $spenddisplaydate = date("F d, Y",$spenddatevar);
+								$spendwithoutmonth = date("d, Y",$spenddatevar);
 								?>
 													<tr>
-														<td><?php the_title(); ?></td>  
-														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $displaydate; ?></td>
+														<td><?php the_content(); ?></td>  
+														<td><?php echo $spdayofweek; ?></td>
+														<?php if($spenddate != ''){?>
+														<td><?php echo $spdatewithoutyear.'-'.$spendwithoutmonth; ?></td>
+														<?php }else{ ?>
+														<td><?php echo $spdisplaydate; ?></td>
+												  <?php } ?>
 													</tr>
 										<?php
-								}
+								
 								endwhile;
 					wp_reset_postdata();
 								endif;
@@ -155,26 +165,33 @@ get_header(); ?>
             'post_type' => 'lccc_academicevent',
 		    						'posts_per_page' => -1,
 		    						'order'=> 'ASC',
-											'event-categories' => 'summer-semester-2016-2017',
+												'event_categories' => 'summer-semester-2016-2017',
     		    		'orderby'=> 'meta_value',
     		    		'meta_key' => 'event_start_date',
           );
 					$summer_wp_query = new WP_Query($summereventargs);
 					if ( $summer_wp_query->have_posts() ) :
 								while ( $summer_wp_query->have_posts() ) : $summer_wp_query->the_post();
-								$date = academic_event_metabox_get_meta('event_start_date');
-								$datevar = strtotime($date);
-								$dayofweek =	date("l",$datevar);
-							 $displaydate = date("F d, Y",$datevar);
-										if( $date >= $summer_start && $date <= $summer_end){
+								$sudate = academic_event_metabox_get_meta('event_start_date');
+								$sudatevar = strtotime($sudate);
+								$sudayofweek =	date("l",$sudatevar);
+								$sudisplaydate = date("F d, Y",$sudatevar);
+								$sudatewithoutyear =	date("F d ",$sudatevar);
+								$suenddate = academic_event_metabox_get_meta('event_end_date');
+								$suenddatevar = strtotime($suenddate);
+								$suenddayofweek =	date("l",$suenddatevar);
+							 $suenddisplaydate = date(" d, Y",$suenddatevar);
 								?>
 													<tr>
-														<td><?php the_title(); ?></td>  
-														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $displaydate; ?></td>
-													</tr>
+														<td><?php echo the_content(); ?></td>  
+														<td><?php echo $sudayofweek; ?></td>
+														<?php if($suenddate != ''){ ?>
+														<td><?php echo $sudisplaydate.'-'.$suenddisplaydate; ?></td>
+														<?php }else{ ?>
+														<td><?php echo $sudisplaydate; ?></td>
+													<?php } ?>
+										</tr>
 										<?php
-										}
 								endwhile;
 					wp_reset_postdata();
 								endif;
@@ -202,16 +219,32 @@ get_header(); ?>
 					$wp_query = new WP_Query($eventargs);
 					if ( $wp_query->have_posts() ) :
 								while ( $wp_query->have_posts() ) : $wp_query->the_post();
-								$date = academic_event_metabox_get_meta('event_start_date');
-								$datevar = strtotime($date);
-								$dayofweek =	date("l",$datevar);
-								$displaydate = date("F d, Y",$datevar);
+								$fadate = academic_event_metabox_get_meta( 'event_start_date' );
+								$fadatevar = strtotime($fadate);
+								$fadayofweek =	date("l",$fadatevar);
+								$fadisplaydate = date("F d, Y",$fadatevar);
+								$fadatewithoutyear =	date("F d ",$fadatevar);
+								$fadateyear = date("Y",$fadatevar);
+								$faenddate = academic_event_metabox_get_meta( 'event_end_date' );
+								$faenddatevar = strtotime($faenddate);
+								$faenddayofweek =	date("l", $faenddatevar);
+							 $faenddisplaydate = date("F d, Y", $faenddatevar);
+							 $faenddatewithoutmonth = date("d, Y", $faenddatevar);
+								$faenddateyear = date("Y", $faenddatevar); 
 								?>
 													<tr>
-														<td><?php the_title(); ?></td>  
-														<td><?php echo $dayofweek; ?></td>
-														<td><?php echo $displaydate; ?></td>
-													</tr>
+														<td><?php echo the_content(); ?></td>  
+														<td><?php echo $fadayofweek; ?></td>
+														<?php if( $faenddate != ''){ ?>
+														<?php if( $fadateyear != $faenddateyear ){?>
+														<td><?php 	echo $fadatewithoutyear.'-'.$faenddisplaydate; ?></td>
+														<?php }else{ ?>
+														<td><?php 	echo $fadatewithoutyear.'-'.$faenddatewithoutmonth; ?></td>
+														<?php } ?>
+														<?php }else{ ?>
+														<td><?php echo $fadisplaydate; ?></td>
+													<?php } ?>
+										</tr>
 										<?php
 								endwhile;
 								wp_reset_postdata();
