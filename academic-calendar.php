@@ -137,7 +137,7 @@ get_header(); ?>
 														<td><?php the_content(); ?></td>  
 														<td><?php echo $spdayofweek; ?></td>
 														<?php if($spenddate != ''){?>
-														<td><?php echo $spdatewithoutyear.'-'.$spendwithoutmonth; ?></td>
+														<td><?php echo $spdatewithoutyear.'- '.$spendwithoutmonth; ?></td>
 														<?php }else{ ?>
 														<td><?php echo $spdisplaydate; ?></td>
 												  <?php } ?>
@@ -186,7 +186,7 @@ get_header(); ?>
 														<td><?php echo the_content(); ?></td>  
 														<td><?php echo $sudayofweek; ?></td>
 														<?php if($suenddate != ''){ ?>
-														<td><?php echo $sudisplaydate.'-'.$suenddisplaydate; ?></td>
+														<td><?php echo $sudisplaydate.'- '.$suenddisplaydate; ?></td>
 														<?php }else{ ?>
 														<td><?php echo $sudisplaydate; ?></td>
 													<?php } ?>
@@ -237,9 +237,9 @@ get_header(); ?>
 														<td><?php echo $fadayofweek; ?></td>
 														<?php if( $faenddate != ''){ ?>
 														<?php if( $fadateyear != $faenddateyear ){?>
-														<td><?php 	echo $fadatewithoutyear.'-'.$faenddisplaydate; ?></td>
+														<td><?php 	echo $fadatewithoutyear.'- '.$faenddisplaydate; ?></td>
 														<?php }else{ ?>
-														<td><?php 	echo $fadatewithoutyear.'-'.$faenddatewithoutmonth; ?></td>
+														<td><?php 	echo $fadatewithoutyear.'- '.$faenddatewithoutmonth; ?></td>
 														<?php } ?>
 														<?php }else{ ?>
 														<td><?php echo $fadisplaydate; ?></td>
