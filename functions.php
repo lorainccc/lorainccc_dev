@@ -42,6 +42,15 @@ function lorainccc_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+ /*
+  * Image Thumbnails
+  * for Homepage Widget areas
+  *
+  */
+
+ add_image_size( 'highlight_thumbnail', 270,180 );
+ add_image_size( 'spotlight_thumbnail', 317,347 );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'lorainccc' ),
