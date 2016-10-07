@@ -58,6 +58,7 @@ function lorainccc_setup() {
 		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
 		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
 		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
+  'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
