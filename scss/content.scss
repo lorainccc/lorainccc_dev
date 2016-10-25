@@ -343,7 +343,12 @@ hr {
     font-weight: 600;
     padding: .65rem 0
 }
-
+@media only screen and (max-width: 40em) { 
+			.link-box-label {
+					max-width: 85%;
+    	margin: 0 auto;
+			}
+}
 .green {
     background: #6db400
 }
