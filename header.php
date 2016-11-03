@@ -45,7 +45,9 @@
           <input type="search" placeholder="Search" name="s" class="float-right"/>
         </label>
       </form>-->
-     <?php get_sidebar(); ?>
+     <div class="large-9 medium-6 columns">
+      <?php get_sidebar(); ?>
+     </div>
     </div>
   </div>
 <div class="medium-blue-bg show-for-medium">

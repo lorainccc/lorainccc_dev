@@ -123,7 +123,7 @@ img.alignleft{float:left;margin:0 1em 1em 0}img.aligncenter{display:block;margin
 .columns.gateway-header img{width:100%;max-width:100%;height:auto}img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{width:100%;max-width:100%;height:auto}
 /*!
 Section 4: Header
-*/input[type=search],input[type=search]:focus{max-width:260px;width:100%;height:2rem;margin:.5rem 0 0 0;border-radius:20px;padding:.25rem .25rem .25rem 2.2rem;font-size:.75rem;font-weight:700;background-image:url(/wp-content/themes/lorainccc/images/icons/icon-search.png);background-repeat:no-repeat;background-position:.75rem .45rem}
+*/input[name=search],input[name=search]:focus{max-width:260px;width:100%;height:2rem;margin:.5rem 0 0 0;border-radius:20px;padding:.25rem .25rem .25rem 2.2rem;font-size:.75rem;font-weight:700;background-image:url(/wp-content/themes/lorainccc/images/icons/icon-search.png);background-repeat:no-repeat;background-position:.75rem .45rem}
 a.skip-link.screen-reader-text{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
 a.skip-link.screen-reader-text:focus{position:static;width:auto;height:auto}.ql-icon{background-position:left center;background-repeat:no-repeat;background-size:.78125rem .78125rem}
 .ql-1{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg)}
@@ -202,7 +202,8 @@ li.current-menu-ancestor,li.current-menu-item{background:#dcdcdc}.main-navigatio
 aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
 .main-right{padding-left:5rem}header{padding-top:1.5rem}.mobile-app-link img,.mobile-app-link h2{float:left}
 aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
-}@media screen and (min-width:1074px){nav.menu-centered{height:36px}}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
+}@media screen and (min-width:1074px){nav.menu-centered{height:36px}}@media only screen and (max-width:40em){.link-box-label{max-width:85%;margin:0 auto}
+footer ul{margin:0}}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
 .white-panel{margin-top:3rem}.cta-icons{margin-bottom:2rem}.footer-sm-links{width:210px;margin:0 auto 1rem auto}
 .footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
 footer{padding-bottom:0}}
