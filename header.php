@@ -40,11 +40,12 @@
            ));
 											?>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
-      <form role="search" method="get" class="search-form" action="">
+      <!--<form role="search" method="get" class="search-form" action="">
         <label>
           <input type="search" placeholder="Search" name="s" class="float-right"/>
         </label>
-      </form>
+      </form>-->
+     <?php get_sidebar(); ?>
     </div>
   </div>
 <div class="medium-blue-bg show-for-medium">
