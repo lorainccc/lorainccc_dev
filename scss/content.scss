@@ -341,7 +341,9 @@ hr {
     font-size: .875rem;
     color: #fefefe;
     font-weight: 600;
-    padding: .65rem 0
+    padding: .65rem 0;
+    width: 270px;
+    margin: 0 auto;
 }
 @media only screen and (max-width: 40em) { 
 			.link-box-label {
@@ -397,7 +399,10 @@ hr {
 }
 
 #home-news hr {
-    margin: -80px auto 40px
+    margin: -80px auto 40px;
+    height: 25px;
+    padding: 10px 0;
+    width: 100%;
 }
 
 #home-news a.all-news {

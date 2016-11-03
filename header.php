@@ -45,7 +45,7 @@
           <input type="search" placeholder="Search" name="s" class="float-right"/>
         </label>
       </form>-->
-     <div class="large-9 medium-6 columns">
+     <div class="large-9 medium-6 columns searchbox">
       <?php get_sidebar(); ?>
      </div>
     </div>
