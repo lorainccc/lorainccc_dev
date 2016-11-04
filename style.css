@@ -50,7 +50,8 @@ Section 1: Foundation
 button.round,.button.round{border-radius:1000px}.tabs-panel{padding:0}.tabs-title{border:1px solid #ddd}
 .tabs{border:0}.tabs-content{border:0}/*!
 Section 2: Content
-*/li.button.tabs-title,li.button.tabs-title.is-active{padding:0}
+*/section.homepage{width:100%;height:50px;margin:20px auto}
+h1.homepage{text-align:center;font-size:3.3em;color:#515151;font-weight:400}li.button.tabs-title,li.button.tabs-title.is-active{padding:0}
 li.button.tabs-title.is-active{background:#0055a5}li.button.tabs-title,li.button.tabs-title.is-active a{color:#fff}
 .academic-calender-content .tabs-title>a{color:#fff}.academic-calender-content .tabs-title>a:hover{background:#555}
 .academic-calender-content .tabs-title>a:focus,.tabs-title>a[aria-selected='true']{background:0}

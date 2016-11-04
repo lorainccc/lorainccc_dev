@@ -34,6 +34,15 @@ get_header();
 					<?php } ?>
     </div>
   </section>
+  <section class="row homepage">
+   <h1 class="homepage"><?php 
+    $bloginfo = get_bloginfo('description');
+    $bloginfo = str_replace('Education', '<span style="font-weight:700;">Education</span>', $bloginfo);
+    $bloginfo = str_replace('Jobs', '<span style="font-weight:700;">Jobs</span>', $bloginfo);
+    $bloginfo = str_replace('Future', '<span style="font-weight:700;">Future</span>', $bloginfo);
+    echo $bloginfo;
+    ?></h1>
+  </section>
   <section class="row">
    	<?php if ( is_active_sidebar( 'lccc-spotlights-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-spotlights-sidebar' ); ?>
