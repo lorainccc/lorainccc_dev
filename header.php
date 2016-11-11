@@ -90,7 +90,7 @@
   </div>
   <div id="responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
-
+     <li><a href="/" alt="Link back to LCCC Home Page">Home</a></li>
 					<?php 	wp_nav_menu(array(
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
