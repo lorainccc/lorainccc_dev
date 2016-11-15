@@ -32,7 +32,12 @@ h1.homepage{
 }
 
 }
-
+div.row hr{
+	   margin: -80px auto 40px;
+   height: 25px;
+   padding: 10px 0;
+   width: 100%;
+}
 li.button.tabs-title ,li.button.tabs-title.is-active{
 	padding: 0;
 }
