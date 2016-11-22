@@ -37,7 +37,7 @@ get_header(); ?>
 		
 	</div>
 	</div>
-	<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-4 large-4 columns">
 				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>
@@ -55,7 +55,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>	
-		<div class="small-12 columns show-for-smaall-only">
+		<div class="small-12 columns hide-for-medium">
 				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>
