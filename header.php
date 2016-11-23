@@ -46,7 +46,21 @@
         </label>
       </form>-->
      <div class="large-9 medium-6 columns searchbox">
-      <?php get_sidebar(); ?>
+      	<?php if ( is_active_sidebar() ) { ?>
+															<?php get_sidebar(); ?>
+								<?php }else{
+															if ( class_exists( 'CustomGoogleSearch' ) ) {
+																// check for plugin using plugin name
+																// Plugin is activated
+																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
+																			echo 'sidebar active and plugin active';
+																		}else{
+																		the_widget('CGS_Widget');
+																			}
+															}else{
+																echo 'no widgets found';
+															}
+								}		?>
      </div>
     </div>
   </div>
@@ -78,15 +92,21 @@
       </span> </div>
   </div>
   <div id="mobile-search" class="show-for-small-only">
-    <div class="row">
-      <div class="small-12 columns">
-        <form role="search" method="get" class="search-form" action="">
-          <label>
-            <input type="search" placeholder="Search" name="s" />
-          </label>
-        </form>
-      </div>
-    </div>
+        <?php if ( is_active_sidebar() ) { ?>
+															<?php get_sidebar(); ?>
+								<?php }else{
+															if ( class_exists( 'CustomGoogleSearch' ) ) {
+																// check for plugin using plugin name
+																// Plugin is activated
+																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
+																			echo 'sidebar active and plugin active';
+																		}else{
+																		the_widget('CGS_Widget');
+																			}
+															}else{
+																echo 'no widgets found';
+															}
+								}		?>
   </div>
   <div id="responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
