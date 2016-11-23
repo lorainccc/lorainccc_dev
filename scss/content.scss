@@ -789,3 +789,6 @@ blockquote {
 .academic-calender-content table tbody th, .academic-calender-content table tbody td{
 	    border: 1px solid #ccc;
 }
+.error-content input[name=search], input[name=search]:focus{ 
+		    max-width: 100%;
+}
