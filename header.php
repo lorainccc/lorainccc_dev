@@ -53,9 +53,11 @@
 																// check for plugin using plugin name
 																// Plugin is activated
 																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-																			echo 'sidebar active and plugin active';
+																	
 																		}else{
-																		the_widget('CGS_Widget');
+																		$instance = array(
+																			'display_results' => '3',
+																		);                                               the_widget('CGS_Widget', $instance);
 																			}
 															}else{
 																echo 'no widgets found';
@@ -99,9 +101,11 @@
 																// check for plugin using plugin name
 																// Plugin is activated
 																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-																			echo 'sidebar active and plugin active';
+																			
 																		}else{
-																		the_widget('CGS_Widget');
+																			$instance = array(
+																			'display_results' => '3',
+																		);                                               the_widget('CGS_Widget', $instance);
 																			}
 															}else{
 																echo 'no widgets found';
