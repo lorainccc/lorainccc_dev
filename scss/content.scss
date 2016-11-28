@@ -16,6 +16,15 @@ h1.homepage{
 }
 
 @media only screen and (max-width: 40em) {
+	div.column.lccc-spotlight{
+		    margin-bottom: 3.0rem;
+	}
+	div.column.lccc-spotlight:last-child{
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 40em) {
 
  section.homepage{
  width:100%;
@@ -34,8 +43,8 @@ h1.homepage{
 }
 div.row hr{
 	   margin: -80px auto 40px;
-   height: 25px;
-   padding: 10px 0;
+   height: 50px;
+   padding: 3rem 0;
    width: 100%;
 }
 li.button.tabs-title ,li.button.tabs-title.is-active{
@@ -797,4 +806,50 @@ blockquote {
 }
 .error-content input[name=search], input[name=search]:focus{ 
 		    max-width: 100%;
+}
+ul {
+    margin-top: 0 !important
+}
+
+@media screen and (min-width: 40em) {
+    .service-box-copy {
+        padding-left:0
+									
+    }
+
+    .service-box-image {
+        padding-right: 0;
+									padding-left:0; 
+    }
+
+    .service-box .button {
+        position: absolute;
+        bottom: 1rem;
+        left: 63.5px
+    }
+
+    .service-box-container {
+        height: 100%
+    }
+
+    aside.columns {
+        padding-right: 0;
+        padding-left: 0
+    }
+
+    .gateway-main,.home-left {
+        padding-right: 5rem
+    }
+
+    .main-right {
+        padding-left: 5rem
+    }
+
+    header {
+        padding-top: 1.5rem
+    }
+
+    .mobile-app-link img,.mobile-app-link h2 {
+        float: left
+    }
 }

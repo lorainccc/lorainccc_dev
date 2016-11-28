@@ -134,50 +134,7 @@ header.entry-header {
     color: #0055a5 !important
 }
 
-ul {
-    margin-top: 0 !important
-}
 
-@media screen and (min-width: 40em) {
-    .service-box-copy {
-        padding-left:0
-    }
-
-    .service-box-image {
-        padding-right: 0
-    }
-
-    .service-box .button {
-        position: absolute;
-        bottom: 1rem;
-        left: 63.5px
-    }
-
-    .service-box-container {
-        height: 100%
-    }
-
-    aside.columns {
-        padding-right: 0;
-        padding-left: 0
-    }
-
-    .gateway-main,.home-left {
-        padding-right: 5rem
-    }
-
-    .main-right {
-        padding-left: 5rem
-    }
-
-    header {
-        padding-top: 1.5rem
-    }
-
-    .mobile-app-link img,.mobile-app-link h2 {
-        float: left
-    }
-}
 
 @media screen and (min-width: 1074px) {
     nav.menu-centered {
