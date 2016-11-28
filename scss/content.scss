@@ -327,12 +327,19 @@ a.button {
 .service-box-container {
     box-shadow: inset 0 0 10px #dcdcdc
 }
-
-.service-box-copy {
-    position: relative;
-    padding: 0
+@media only screen and (min-width: 40em) {
+			.service-box-copy {
+							position: relative;
+							padding: 0
+			}
 }
-
+@media only screen and (max-width: 40em) {
+			.service-box-copy{
+						position: relative;
+						padding-left: 0.625rem;
+						padding-right: 0.625rem;
+			}
+}
 .service-box-body {
     font-size: .75rem;
     padding: 2rem 1rem
