@@ -46,7 +46,7 @@
         </label>
       </form>-->
      <div class="large-9 medium-6 columns searchbox">
-      	<?php if ( is_active_sidebar() ) { ?>
+      	<?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
 															<?php get_sidebar(); ?>
 								<?php }else{
 															if ( class_exists( 'CustomGoogleSearch' ) ) {
