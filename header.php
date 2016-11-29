@@ -94,7 +94,7 @@
       </span> </div>
   </div>
   <div id="mobile-search" class="show-for-small-only">
-        <?php if ( is_active_sidebar() ) { ?>
+        <?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
 															<?php get_sidebar(); ?>
 								<?php }else{
 															if ( class_exists( 'CustomGoogleSearch' ) ) {
