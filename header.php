@@ -47,7 +47,7 @@
       </form>-->
      <div class="large-9 medium-6 columns searchbox">
       	<?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
-															<?php get_sidebar(); ?>
+																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
 								<?php }else{
 															if ( class_exists( 'CustomGoogleSearch' ) ) {
 																// check for plugin using plugin name
@@ -95,7 +95,7 @@
   </div>
   <div id="mobile-search" class="show-for-small-only">
         <?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
-															<?php get_sidebar(); ?>
+																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
 								<?php }else{
 															if ( class_exists( 'CustomGoogleSearch' ) ) {
 																// check for plugin using plugin name
