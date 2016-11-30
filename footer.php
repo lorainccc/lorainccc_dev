@@ -35,7 +35,7 @@
         1-800-995-LCCC (5222)<br />
 							 or (440) 365-5222<br />
         <a href="mailto:info@lorainccc.edu" title="Email LCCC for more information">info@lorainccc.edu</a> </p>
-      <ul class="underline"> 
+      <ul class="underline">
         <li><a href="/about/map-and-directions-to-lccc/" title="Map and Directions to LCCC">Map and Directions</a></li>
         <li><a href="/about/contact-lorain-county-community-college/" title="Contact LCCC">Contact LCCC</a></li>
         <li><a href="/getting-started/campus-visitation-days/" title="Visit LCCC">Visit LCCC</a></li>
@@ -44,7 +44,7 @@
     <div class="large-3 medium-3 columns">
       <h2>Campus Locations</h2>
   <?php if ( has_nav_menu( 'footer-campus-location-nav' ) ) : ?>
-		<nav id="site-navigation" class="footer-navigation" role="navigation">
+		<nav id="campus-location-navigation" class="footer-navigation" role="navigation">
 			<?php
 				// Primary Footer navigation menu.
 				wp_nav_menu( array(
@@ -58,7 +58,7 @@
     <div class="large-3 medium-3 columns">
       <h2>Quick Links</h2>
 	<?php if ( has_nav_menu( 'footer-quicklinks-nav' ) ) : ?>
-		<nav id="site-navigation" class="footer-navigation" role="navigation">
+		<nav id="quicklinks-navigation" class="footer-navigation" role="navigation">
 			<?php
 				// Primary Footer navigation menu.
 				wp_nav_menu( array(
