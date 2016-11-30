@@ -25,6 +25,10 @@ footer a,footer p {
     font-size: .75rem
 }
 
+footer a:hover{
+ color: #fff;
+}
+
 footer .footer-logo {
     margin-bottom: 2.5rem
 }
@@ -36,7 +40,7 @@ footer ul {
 @media only screen and (max-width: 40em) {
 					footer ul {
 								margin:0;
-					} 
+					}
 }
 
 footer ul li {
@@ -60,7 +64,7 @@ footer .underline>li>a:hover, a:hover {
 		.mobile-app-link img {
 						margin-right: .75rem
 		}
-} 
+}
 .website-feedback{
  margin:10px 0;
  float:left;

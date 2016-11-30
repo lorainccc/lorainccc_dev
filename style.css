@@ -42,13 +42,14 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{b
 .screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 /*!
 Text Section
-*/h1{font-size:2.1875rem;margin-top:.25rem}h1,h2{color:#0055a5;font-weight:700}
-h2{line-height:110%;margin-top:.25rem;font-size:1.625rem}h2.cta-h2{text-transform:uppercase}
-p{font-weight:500;font-size:.8625rem}/*!
+*/a{color:#007bbf}h1{font-size:2.1875rem;margin-top:.25rem}
+h1,h2{color:#0055a5;font-weight:700}h2{line-height:110%;margin-top:.25rem;font-size:1.625rem}
+h2.cta-h2{text-transform:uppercase}p{font-size:1rem}div.entry-content h3{line-height:110%;margin-top:.25rem;font-size:1.425rem;color:#6d6d6d;font-weight:600}
+/*!
 Section 1: Foundation
-*/button.radius,.button.radius{border-radius:10px}
-button.round,.button.round{border-radius:1000px}.tabs-panel{padding:0}.tabs-title{border:1px solid #ddd}
-.tabs{border:0}.tabs-content{border:0}/*!
+*/button.radius,.button.radius{border-radius:10px}button.round,.button.round{border-radius:1000px}
+.tabs-panel{padding:0}.tabs-title{border:1px solid #ddd}.tabs{border:0}.tabs-content{border:0}
+/*!
 Section 2: Content
 */section.homepage{width:100%;height:10px;margin:20px auto}
 h1.homepage{text-align:center;font-size:35.2px;color:#003b76;font-weight:400}div.row hr{margin:-80px auto 40px;height:50px;padding:3rem 0;width:100%}
@@ -108,10 +109,10 @@ a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:bloc
 .fw-lead p{font-size:1rem}.lead p{font-size:1rem}.news-feed .featured-image img{width:100%;height:auto;margin-bottom:1rem}
 .gateway-links{padding-top:2rem;margin-bottom:2rem;box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-moz-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-webkit-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8)}
 .gateway-links h2{font-size:1.5rem;margin-bottom:0}.gateway-links .menu>li>a{font-size:.75rem;color:#5593db;text-decoration:underline;padding:.5rem 0}
-.gateway-links img{margin-top:.5rem;margin-bottom:.5rem;width:100%;height:auto}.gateway-links a{font-size:.8625rem;text-decoration:underline;font-weight:800}
+.gateway-links img{margin-top:.5rem;margin-bottom:.5rem;width:100%;height:auto}.gateway-links a{font-size:1rem;text-decoration:underline;font-weight:800}
 .row .row.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
 .row .row.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
-.row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8625rem}
+.row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:1rem}
 .callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
 .callout-link img{display:inline-block;margin-right:.5rem}.callout-link a,.callout-link span{color:#5593db}
 .video-container{margin-bottom:2rem;position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
@@ -128,7 +129,7 @@ a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:bloc
 .error-content input[name=search],input[name=search]:focus{max-width:100%}ul{margin-top:0 !important}
 /*!
 Section 3: Body
-*/body{font-size:.8625rem;font-family:"Open Sans",sans-serif;font-weight:500;line-height:1.5;color:#606060;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*/body{font-size:1rem;font-family:"Open Sans",sans-serif;font-weight:500;line-height:1.5;color:#606060;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 h1,h2,h3,h4,h5,h6,h7{font-family:"Raleway",sans-serif}img.alignright{float:right;margin:0 0 1em 1em}
 img.alignleft{float:left;margin:0 1em 1em 0}img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 .alignright{float:right}.alignleft{float:left}.aligncenter{display:block;margin-left:auto;margin-right:auto}
@@ -186,7 +187,7 @@ Section 6: Footer
 */footer{margin-top:5rem;background:#0c3b78;padding:2rem 0 4rem 0;font-size:.75rem}
 footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:700}
 footer .menu>li>a{padding:0 .25rem 0 0}footer a,footer p{color:#fefefe;font-size:.75rem}
-footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}
+footer a:hover{color:#fff}footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}
 footer ul li{margin-bottom:.75rem}footer .underline>li>a{text-decoration:none}footer .underline>li>a:hover,a:hover{text-decoration:underline}
 .footer-sm-links{margin-bottom:2rem}.website-feedback{margin:10px 0;float:left;width:100%}
 .website-feedback a{text-decoration:none}.website-feedback a:hover{text-decoration:underline}
