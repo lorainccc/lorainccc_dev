@@ -76,7 +76,7 @@
 											'menu' => __( 'Primary', 'textdomain' ),
 											'menu_class' => 'dropdown menu',
 											'theme_location' => 'primary',
-											'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+											'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menubar" data-dropdown-menu>%3$s</ul>',
 											//Recommend setting this to false, but if you need a fallback...
 											'fallback_cb' => 'lc_topbar_menu_fallback',
 											'walker' => new lc_top_bar_menu_walker,
@@ -113,6 +113,7 @@
 								}		?>
   </div>
   <div id="responsive-menu" class="show-for-small-only">
+			  <nav role="navigation" aria-label="<?php _e( 'Mobile Main Menu', 'lorainccc' );?>">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
      <li><a href="/" alt="Link back to LCCC Home Page">Home</a></li>
 					<?php 	wp_nav_menu(array(
@@ -141,6 +142,7 @@
 					?>
 
     </ul>
+			</nav>
   </div>
 
 		</div>
