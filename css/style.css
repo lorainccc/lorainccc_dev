@@ -125,10 +125,11 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .service-box .button{position:absolute;bottom:1rem;left:63.5px}.service-box-container{height:100%}
 aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
 .main-right{padding-left:5rem}header{padding-top:1.5rem}.mobile-app-link img,.mobile-app-link h2{float:left}
-}table{margin:0 0 1em 0;width:100%;border:1px solid #ccc;border-top:0;display:table}
-table th{padding:.5em .75em;vertical-align:top;font-weight:bold;text-align:left;background:#0055a5;color:#fff;text-transform:uppercase;font-size:1.1em}
-table td{border-top:1px solid #ccc;padding:.3em .75em;vertical-align:top}table.outerformtablerows{border:0;background:#fff}
-table tr.odd{background:#f7f7f7}table.outerformtablerows tbody{border:0}.fieldtr,.fieldtitle{background:#fff}
+}.entry-content table{margin:0 0 1em 0;width:100%;border:1px solid #ccc;border-top:0;display:table}
+.entry-content table th{padding:.5em .75em;vertical-align:top;font-weight:bold;text-align:left;background:#0055a5;color:#fff;text-transform:uppercase;font-size:1.1em}
+.entry-content table td{border-top:1px solid #ccc;padding:.3em .75em;vertical-align:top}
+.entry-content table.outerformtablerows{border:0;background:#fff}.entry-content table tr.odd{background:#f7f7f7}
+.entry-content table.outerformtablerows tbody{border:0}.fieldtr,.fieldtitle{background:#fff}
 .eformstext{display:none}div.afnavbuttons input[type=submit]{margin:0 10px 0 0}/*!
 Section 3: Body
 */body{font-size:1.1rem;font-family:"Open Sans",sans-serif;font-weight:500;line-height:1.5;color:#202020;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
