@@ -12,7 +12,7 @@ h1.homepage{
  font-size: 35.2px;
  //color: #515151;
  color: #003B76;
- font-weight: 400; 
+ font-weight: 400;
 }
 
 @media only screen and (max-width: 40em) {
@@ -31,13 +31,13 @@ h1.homepage{
  height: 40px;
  margin: 10px auto;
 }
- 
+
  h1.homepage{
  text-align:center;
  font-size: 1.8em;
  //color: #515151;
  color: #003B76;
- font-weight: 400; 
+ font-weight: 400;
 }
 
 }
@@ -358,7 +358,7 @@ a.button {
     width: 100%;
     height: 5px;
     background: #ffc600;
-				float: left; 
+				float: left;
 }
 
 hr {
@@ -391,10 +391,10 @@ hr {
 }
 
 .link-box-label {
-    font-size: 1.075rem;
-    color: #ffffff;
-    font-weight: 700;
-    padding: .65rem 0; 
+    font-size: .875rem;
+    color: #fefefe;
+    font-weight: 600;
+    padding: .65rem 0;
     max-width: 270px;
     margin: 0 auto;
 }
@@ -426,7 +426,7 @@ hr {
 }
 
 #home-news h2 {
-    margin: 2rem 0
+    margin: 2.5rem 0;
 }
 
 #home-news .featured-image {
@@ -440,7 +440,7 @@ hr {
 }
 
 #home-news p {
-    font-size: .75rem;
+    font-size: 1rem;
     margin-bottom: .25rem
 }
 
@@ -804,7 +804,7 @@ blockquote {
 .academic-calender-content table tbody th, .academic-calender-content table tbody td{
 	    border: 1px solid #ccc;
 }
-.error-content input[name=search], input[name=search]:focus{ 
+.error-content input[name=search], input[name=search]:focus{
 		    max-width: 100%;
 }
 ul {
@@ -814,12 +814,12 @@ ul {
 @media screen and (min-width: 40em) {
     .service-box-copy {
         padding-left:0
-									
+
     }
 
     .service-box-image {
         padding-right: 0;
-									padding-left:0; 
+									padding-left:0;
     }
 
     .service-box .button {
@@ -852,49 +852,4 @@ ul {
     .mobile-app-link img,.mobile-app-link h2 {
         float: left
     }
-}
-
-.entry-content table {
-    margin: 0 0 1em 0;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-top: none;
-		display: table;
-}
-
-.entry-content table th {
-    padding: .5em .75em;
-    vertical-align: top;
-    font-weight: bold;
-    text-align: left;
-    background: $lcccblue;  
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.1em;
-}
-.entry-content table td {
-    border-top: 1px solid #ccc;
-    padding: .3em .75em;
-    vertical-align: top;
-}
-.entry-content table.outerformtablerows {
-   border: 0;
-   background: #fff;
-}
-.entry-content 	table tr.odd {
-    background: #f7f7f7;
-}
-.entry-content table.outerformtablerows tbody{
-border: 0;
-}
-.fieldtr, .fieldtitle {
-   background: #fff;
-}
-
-.eformstext{
-display: none;
-}
-
-div.afnavbuttons input[type=submit] {
-   margin: 0 10px 0 0;
 }
