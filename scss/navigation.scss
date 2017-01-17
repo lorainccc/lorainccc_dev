@@ -3,13 +3,13 @@ Section 5: Navigation
 */
 
 header nav a,header nav a:hover {
-    color: #fefefe;
-    font-size: .875rem;
-    font-weight: 600
+    font-size: 1rem;
+    color: #0055a5;
+    font-weight: 700
 }
 
 header ul#header-menu li a {
-    font-size: .78125rem;
+    font-size: 1rem;
     color: #0055a5;
     font-weight: 700
 }
@@ -64,7 +64,7 @@ header .dropdown.menu>li.is-dropdown-submenu-parent>a::after {
 
 .medium-blue-bg {
     width: 100%;
-    background: $lcccblue; 
+    background: $lcccblue;
 }
 li.divider:after {
     content: "|";

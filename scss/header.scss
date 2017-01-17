@@ -38,3 +38,8 @@ ul {
 td.gsc-clear-button{
 	display: none;
 }
+
+//Google Custom Search - Mobile fixes
+
+.ui-dialog {width:auto !important; max-width:600px;}
+.ui-dialog .ui-dialog-titlebar-close span.ui-button-text {display:none;}
