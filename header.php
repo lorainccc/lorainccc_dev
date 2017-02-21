@@ -26,6 +26,73 @@
   ga('send', 'pageview');
 
 </script>
+<style>
+/* Campus Status Styling */
+
+.lc-active{
+ display:block;
+}
+
+.lc-inactive{
+ display:none;
+}
+ 
+ .lc-status{
+  margin: 10px 0;
+  min-height: 155px;
+ }
+ 
+ .lc-status h3{
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #c00000;
+ }
+ 
+  .lc-status .lc-status-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c00000) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c00000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c00000');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:8px;
+	-moz-border-radius-topleft:8px;
+	border-top-left-radius:8px;
+	-webkit-border-top-right-radius:8px;
+	-moz-border-radius-topright:8px;
+	border-top-right-radius:8px;
+	-webkit-border-bottom-right-radius:8px;
+	-moz-border-radius-bottomright:8px;
+	border-bottom-right-radius:8px;
+	-webkit-border-bottom-left-radius:8px;
+	-moz-border-radius-bottomleft:8px;
+	border-bottom-left-radius:8px;
+	text-indent:0px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+ padding:0 15px;
+}
+  .lc-status .lc-status-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c00000), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c00000 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c00000', endColorstr='#f24537');
+	background-color:#c00000;
+}
+  .lc-status .lc-status-button:active {
+	position:relative;
+	top:1px;
+</style>
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
