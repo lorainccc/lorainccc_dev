@@ -12,6 +12,20 @@
  */
 get_header();
 ?>
+<div ng-app="app">
+ <div ng-controller="lcStatusCtrl">
+  <div class="row" ng-class="notify.active == '1' ? 'lc-active' : 'lc-inactive'">
+      <div class="show-for-medium large-2 columns lc-status">
+      <img src="/wp-content/themes/lorainccc/images/campus-status-exclamation.png" border="0" />
+      </div>
+      <div class="small-12 large-10 columns lc-status">
+         <h3>{{notify.headline}}</h3>
+       <p>{{notify.text}}</p>
+       <p><a href="{{notify.url}}" border="0" title="Learn more about LCCC Campus Status" target="_blank" class="lc-status-button">Learn More</a></p>
+      </div>
+   </div>
+  </div>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
   <?php if ( is_active_sidebar( 'homepage-slider-sidebar' ) ) { ?>
@@ -35,7 +49,7 @@ get_header();
     </div>
   </section>
   <section class="row homepage">
-   <h1 class="homepage"><?php 
+   <h1 class="homepage"><?php
     $bloginfo = get_bloginfo('description');
     $bloginfo = str_replace('Education', '<span style="font-weight:700;">Education</span>', $bloginfo);
     $bloginfo = str_replace('Jobs', '<span style="font-weight:700;">Jobs</span>', $bloginfo);
