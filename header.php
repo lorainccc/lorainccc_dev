@@ -29,6 +29,10 @@
 <style>
 /* Campus Status Styling */
 
+ [ng-class]{
+  display: none;
+ }
+
 .lc-active{
  display:block;
 }
@@ -36,19 +40,19 @@
 .lc-inactive{
  display:none;
 }
- 
+
  .lc-status{
   margin: 10px 0;
   min-height: 155px;
  }
- 
+
  .lc-status h3{
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: #c00000;
  }
- 
+
   .lc-status .lc-status-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
@@ -126,7 +130,7 @@
 																// check for plugin using plugin name
 																// Plugin is activated
 																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-																	
+
 																		}else{
 																		$instance = array(
 																			'display_results' => '3',
@@ -174,7 +178,7 @@
 																// check for plugin using plugin name
 																// Plugin is activated
 																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-																			
+
 																		}else{
 																			$instance = array(
 																			'display_results' => '3',
@@ -200,8 +204,8 @@
 													'walker' => new lc_drill_menu_walker(),
 												));
      ?>
-     <li>&nbsp;</li> 
-     <?php      
+     <li>&nbsp;</li>
+     <?php
             wp_nav_menu(array(
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),

@@ -15,7 +15,7 @@ get_header();
 <div ng-app="app">
  <div ng-controller="lcStatusCtrl">
   <div class="row" ng-class="notify.active == '1' ? 'lc-active' : 'lc-inactive'">
-      <div class="large-2 columns lc-status">
+      <div class="show-for-medium large-2 columns lc-status">
       <img src="/wp-content/themes/lorainccc/images/campus-status-exclamation.png" border="0" />
       </div>
       <div class="small-12 large-10 columns lc-status">
