@@ -168,7 +168,7 @@ function lorainccc_widgets_init() {
 		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc' ),
 		'id'            => 'lccc-events-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labeledby="lc-event-feed">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -177,7 +177,7 @@ function lorainccc_widgets_init() {
 		'name'          => esc_html__( 'LCCC Announcements Sidebar', 'lorainccc' ),
 		'id'            => 'lccc-announcements-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labeledby="lc-announcement-feed">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -213,21 +213,25 @@ function lorainccc_foundation_scripts() {
  // Add Genericons, used in the main stylesheet.
 	 wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
-	 wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
-		wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
-		wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
+	 wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation-643/css/foundation.css' );
 
-		wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/vendor/foundation.js', array( 'jquery' ), '1', true );
-		wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation/js/vendor/what-input.js', array( 'jquery' ), '1', true);
+		wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation-643/js/vendor/foundation.js', array( 'jquery' ), '1', true );
+		wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation-643/js/vendor/what-input.js', array( 'jquery' ), '1', true);
 
 		wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 
   wp_enqueue_script( 'lc-campus-status-front', get_stylesheet_directory_uri() . '/js/lc-campus-status-front.js', array( 'jquery' ), '1', false );
 
+		wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 
-	wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
-
-wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
+		//Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
+	wp_enqueue_script( 'lc-eloqua-scripts', get_stylesheet_directory_uri() . '/js/lc-eloqua.js', array(), '20180828', false);
+	wp_enqueue_script( 'lc-google-analytics-scripts', get_stylesheet_directory_uri() . '/js/lc-google-analytics.js', array(), '20180828', false);
+	wp_enqueue_script( 'lc-google-tag-scripts', get_stylesheet_directory_uri() . '/js/lc-google-tag.js', array(), '20180828', false);
+	wp_enqueue_script( 'lc-hotjar-scripts', get_stylesheet_directory_uri() . '/js/lc-hotjar.js', array(), '20180828', false);
+	wp_enqueue_script( 'lc-siteimprove-scripts', get_stylesheet_directory_uri() . '/js/lc-siteimprove.js', array(), '20180828', false);
+	
+		wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );
@@ -336,4 +340,31 @@ function custom_excerpt_length($length) {
     return 40;
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
+
+// Removing Default Jetpack Sharing Button Filters
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
+
+/**
+ * Search across all network sites with Elasticpress
+ *
+ * @param $scope string Search scope
+ *
+ * @return string
+ */
+
+function lc_ep_search_scope( $scope ){
+	return 'all';
+}
+
+add_filter( 'ep_search_scope', 'lc_ep_search_scope' );
+
 ?>

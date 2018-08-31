@@ -14,36 +14,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-7542329-2', 'auto', {'allowLinker': true});
-  ga('require', 'linker');
-  ga('linker:autoLink', ['sites.lorainccc.edu'] );
-  ga('send', 'pageview');
-
-</script>
-
-<!-- Begin Eloqua tracking script -->
-<script type="text/javascript">
-    var _elqQ = _elqQ || [];
-    _elqQ.push(['elqSetSiteId', '577764303']);
-    _elqQ.push(['elqTrackPageView']);
-    
-    (function () {
-        function async_load() {
-            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-            s.src = '//img04.en25.com/i/elqCfg.min.js';
-            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-        }
-        if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
-        else if (window.attachEvent) window.attachEvent('onload', async_load); 
-    })();
-</script>
-<!-- End Eloqua tracking script -->
 
 	<style>
 /* Campus Status Styling */
@@ -120,11 +90,14 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
+	
 
 	<header id="masthead" class="site-header" role="banner">
-		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/LCCC-Logo.png" height="70" width="325" alt="Lorain County Community College Logo" /></a>  </div>
-    <div class="large-6 medium-6 columns">
+<div class="grid-container">
+		<div class="grid-x grid-margin-x show-for-medium">
+    <div class="large-6 medium-6 cell"><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/LCCC-Logo.png" height="70" width="325" alt="Lorain County Community College Logo" /></a>  </div>
+
+    <div class="large-6 medium-6 cell">
      									<?php
           wp_nav_menu(array(
 											'container' => false,
@@ -141,30 +114,33 @@
           <input type="search" placeholder="Search" name="s" class="float-right"/>
         </label>
       </form>-->
-     <div class="large-9 medium-6 columns searchbox">
-      	<?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
-																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
-								<?php }else{
-															if ( class_exists( 'CustomGoogleSearch' ) ) {
-																// check for plugin using plugin name
-																// Plugin is activated
-																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
+					<div class="grid-x grid-margin-x align-right">
+						<div class="large-9 medium-6 cell searchbox">
+								<?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
+																	<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
+									<?php }else{
+																if ( class_exists( 'CustomGoogleSearch' ) ) {
+																	// check for plugin using plugin name
+																	// Plugin is activated
+																			if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
 
-																		}else{
-																		$instance = array(
-																			'display_results' => '3',
-																		);                                               the_widget('CGS_Widget', $instance);
-																			}
-															}else{
-																echo 'no widgets found';
-															}
-								}		?>
-     </div>
+																			}else{
+																			$instance = array(
+																				'display_results' => '3',
+																			);                                               the_widget('CGS_Widget', $instance);
+																				}
+																}else{
+																	echo 'no widgets found';
+																}
+									}		?>
+						</div>
+					</div>
     </div>
   </div>
+	</div>
 <div class="medium-blue-bg show-for-medium">
-    <div class="row">
-      <div class="large-12 columns">
+    <div class="grid-x grid-margin-x">
+      <div class="large-12 cell">
         <nav class="menu-centered">
 									<?php
           wp_nav_menu(array(
@@ -182,10 +158,10 @@
       </div>
     </div>
   </div>
-  <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="165" height="31.875" /></a> </div>
-    <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
-    <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <div class="grid-x grid-margin-x show-for-small-only mobile-nav-bar">
+    <div class="small-8 cell"> <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="165" height="31.875" /></a> </div>
+    <div class="small-2 cell clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
+    <div class="small-2 cell"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
       </span> </div>
   </div>
