@@ -16,17 +16,19 @@ get_header();
  <div ng-controller="lcStatusCtrl">
   <div class="row" ng-class="notify.active == '1' ? 'lc-active' : 'lc-inactive'">
       <div class="show-for-medium large-2 columns lc-status">
-      <img src="/wp-content/themes/lorainccc/images/campus-status-exclamation.png" border="0" />
+      <img src="/wp-content/themes/lorainccc/images/campus-status-{{notify.type}}.png" alt="{{notify.headline}}" border="0" />
       </div>
       <div class="small-12 large-10 columns lc-status">
-         <h3>{{notify.headline}}</h3>
+       <span class="headline {{notify.type}}">{{notify.headline}}</span>
        <p>{{notify.text}}</p>
-       <p><a href="{{notify.url}}" border="0" title="Learn more about LCCC Campus Status" target="_blank" class="lc-status-button">Learn More</a></p>
+       <p><a href="{{notify.url}}" border="0" title="Learn more about LCCC Campus Status" target="_blank" class="lc-status-button-{{notify.type}}">Learn More</a></p>
       </div>
+      				 <!-- Spacer -->
+			  <div style="height:4px; width:100%; display:inline-block;">&nbsp;</div>
    </div>
   </div>
 </div>
-	<div id="primary" class="content-area">
+    <div id="primary" class="content-area" style="border-top: 2px #0055a5 solid;">
 		<main id="main" class="site-main" role="main">
   <?php if ( is_active_sidebar( 'homepage-slider-sidebar' ) ) { ?>
 
@@ -39,17 +41,17 @@ get_header();
 			</div>
   </div>
   <?php } ?>
-  <section class="cta-icons">
-    <div class="row icon-container">
+  <section class="cta-icons" aria-label="Popular links for students and parents" role="region" aria-labelledby="lc-dashboard">
+    <div id="lc-dashboard" class="row icon-container">
 					<?php if ( is_active_sidebar( 'cta-icons-sidebar' ) ) { ?>
-								<ul id="sidebar" style="position: relative;">
+								
 											<?php dynamic_sidebar( 'cta-icons-sidebar' ); ?>
-								</ul>
+							
 					<?php } ?>
     </div>
   </section>
-  <section class="row homepage">
-   <h1 class="homepage"><?php
+  <section class="row homepage" aria-label="LCCC marketing statement" aria-labelledby="lc-marketing-statement">
+   <h1 id="lc-marketing-statement" class="homepage"><?php
     $bloginfo = get_bloginfo('description');
     $bloginfo = str_replace('Education', '<span style="font-weight:700;">Education</span>', $bloginfo);
     $bloginfo = str_replace('Jobs', '<span style="font-weight:700;">Jobs</span>', $bloginfo);
@@ -57,7 +59,7 @@ get_header();
     echo $bloginfo;
     ?></h1>
   </section>
-  <section class="row">
+  <section class="row" aria-label="For our community">
    	<?php if ( is_active_sidebar( 'lccc-spotlights-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-spotlights-sidebar' ); ?>
 				<?php } ?>
@@ -73,7 +75,7 @@ get_header();
   <div class="column row">
     <hr />
   </div>
-  <section class="row news-feed" id="home-news">
+  <section class="row news-feed" id="home-news" aria-labelledby="lccc_announcement_feed_widget-2 lccc_feed_widget-2">
     <div class="large-8 medium-8 columns home-left">
 <?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
