@@ -16,6 +16,11 @@ h1,h2 {
     font-weight: 700
 }
 
+a, a:focus {
+  color: $medium-blue;
+  font-weight: 500;
+ }
+
 h2 {
     line-height: 110%;
     margin-top: .25rem;

@@ -17,11 +17,10 @@ get_header(); ?>
 </div>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-
-	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-			<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
 		<h3>SIDEBAR MENU</h3>
 		</div>
+	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="secondary">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -34,15 +33,15 @@ get_header(); ?>
 				?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
-			</div>
 		<?php endif; ?>
-
-	<div class="small-12 medium-12 large-12 columns">
+		
+	</div>
+	</div>
+	<div class="small-12 medium-4 large-4 columns">
 				<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>
 	</div>
-			</div>
 	</div>			
 	<div class="small-12 medium-8 large-8 columns">		
 	<div id="primary" class="content-area">
@@ -63,3 +62,4 @@ get_header(); ?>
 	</div>
 </div>
 <?php get_footer(); ?>
+

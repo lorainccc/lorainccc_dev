@@ -168,7 +168,7 @@ function lorainccc_widgets_init() {
 		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc' ),
 		'id'            => 'lccc-events-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labeledby="lc-event-feed">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labelledby="lc-event-feed">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -177,7 +177,7 @@ function lorainccc_widgets_init() {
 		'name'          => esc_html__( 'LCCC Announcements Sidebar', 'lorainccc' ),
 		'id'            => 'lccc-announcements-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labeledby="lc-announcement-feed">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s" aria-labelledby="lc-announcement-feed">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -215,6 +215,8 @@ function lorainccc_foundation_scripts() {
 
 	wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
 
+	wp_enqueue_script( 'lc-mobile-nav-js', get_stylesheet_directory_uri() . '/js/mobile-nav.js', array( 'jquery' ), '1', true );
+
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/vendor/foundation.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation/js/vendor/what-input.js', array( 'jquery' ), '1', true);
 
@@ -223,6 +225,8 @@ function lorainccc_foundation_scripts() {
   	wp_enqueue_script( 'lc-campus-status-front', get_stylesheet_directory_uri() . '/js/lc-campus-status-front.js', array( 'jquery' ), '1', false );
 
 	wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+
+	wp_enqueue_script( 'lorainccc-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array('jquery'), '20190328', true );
 
 	//Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
 	wp_enqueue_script( 'lc-eloqua-scripts', get_stylesheet_directory_uri() . '/js/lc-eloqua.js', array(), '20180828', false);

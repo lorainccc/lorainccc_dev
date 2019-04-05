@@ -75,7 +75,7 @@ get_header();
   <div class="column row">
     <hr />
   </div>
-  <section class="row news-feed" id="home-news" aria-labelledby="lccc_announcement_feed_widget-2 lccc_feed_widget-2">
+  <section class="row news-feed" id="home-news" aria-labelledby="lccc_announcement_feed_widget-2 lccc_feed_widget-4">
     <div class="large-8 medium-8 columns home-left">
 <?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
