@@ -2,6 +2,10 @@
 Section 6: Footer
 */
 
+footer a {
+    text-decoration: underline;
+}
+
 footer {
     margin-top: 5rem;
     background: #0c3b78;
@@ -47,13 +51,13 @@ footer ul li {
     margin-bottom: .75rem
 }
 
-footer .underline>li>a {
+/* footer .underline>li>a {
     text-decoration: none
 }
 
 footer .underline>li>a:hover, a:hover {
     text-decoration: underline
-}
+} */
 
 
 .footer-sm-links {
@@ -70,13 +74,13 @@ footer .underline>li>a:hover, a:hover {
  float:left;
  width:100%;
 }
-.website-feedback a{
+/* .website-feedback a{
  text-decoration: none;
 }
-
+ 
 .website-feedback a:hover{
  text-decoration: underline;
-}
+} */
 
 //Highlight current page in Left Nav
 li.current-menu-ancestor, li.current-menu-item {

@@ -1,6 +1,10 @@
 /*!
 Section 2: Content
 */
+
+a:focus{
+    text-decoration:underline;
+}
 div.content table thead, table tbody, table tfoot{
     border:0;
 }
@@ -164,7 +168,7 @@ a img.aligncenter {
     left: 5px;
     line-height: normal;
     padding: 15px 23px 14px;
-    text-decoration: none;
+    //text-decoration: none;
     top: 5px;
     width: auto;
     z-index: 100000

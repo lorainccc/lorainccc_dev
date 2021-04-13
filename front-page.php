@@ -12,22 +12,6 @@
  */
 get_header();
 ?>
-<div ng-app="app">
- <div ng-controller="lcStatusCtrl">
-  <div class="row" ng-class="notify.active == '1' ? 'lc-active' : 'lc-inactive'">
-      <div class="show-for-medium large-2 columns lc-status">
-      <img src="/wp-content/themes/lorainccc/images/campus-status-{{notify.type}}.png" alt="{{notify.headline}}" border="0" />
-      </div>
-      <div class="small-12 large-10 columns lc-status">
-       <span class="headline {{notify.type}}">{{notify.headline}}</span>
-       <p>{{notify.text}}</p>
-       <p><a href="{{notify.url}}" border="0" title="Learn more about LCCC Campus Status" target="_blank" class="lc-status-button-{{notify.type}}">Learn More</a></p>
-      </div>
-      				 <!-- Spacer -->
-			  <div style="height:4px; width:100%; display:inline-block;">&nbsp;</div>
-   </div>
-  </div>
-</div>
     <div id="primary" class="content-area" style="border-top: 2px #0055a5 solid;">
 		<main id="main" class="site-main" role="main">
   <?php if ( is_active_sidebar( 'homepage-slider-sidebar' ) ) { ?>

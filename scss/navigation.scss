@@ -2,9 +2,9 @@
 Section 5: Navigation
 */
 
-header nav a,header nav a:hover {
+header nav a, header nav a:hover, header nav a:focus{
+    color: #fff;
     font-size: .875rem;
-    color: #fefefe;
     font-weight: 700
 }
 
@@ -41,8 +41,8 @@ header .dropdown.menu .submenu li:hover a {
     color: #0c3b78
 }
 
-header li.is-submenu-item:not(.is-drilldown-submenu-item) a {
-    color: #fefefe;
+header li.is-submenu-item:not(.is-drilldown-submenu-item) a, header li.is-submenu-item:not(.is-drilldown-submenu-item) a:hover, header li.is-submenu-item:not(.is-drilldown-submenu-item) a:focus {
+    color: #fff;
     font-size: .85rem
 }
 
@@ -254,7 +254,7 @@ li.divider:after {
     line-height: 1;
     speak: none;
     text-align: center;
-    text-decoration: inherit;
+    //text-decoration: inherit;
     text-transform: none;
     vertical-align: top
 }

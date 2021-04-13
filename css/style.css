@@ -40,7 +40,7 @@ Section 1: Foundation
 .tabs-panel{padding:0}.tabs-title{border:1px solid #ddd}.tabs{border:0}.tabs-content{border:0}
 /*!
 Section 2: Content
-*/div.content table thead,table tbody,table tfoot{border:0}
+*/a:focus{text-decoration:underline}div.content table thead,table tbody,table tfoot{border:0}
 section.homepage{width:100%;height:10px;margin:20px auto}h1.homepage{text-align:center;font-size:35.2px;color:#003b76;font-weight:400}
 div.row hr{margin:-80px auto 40px;height:50px;padding:3rem 0;width:100%}li.button.tabs-title,li.button.tabs-title.is-active{padding:0}
 li.button.tabs-title.is-active{background:#0055a5}li.button.tabs-title,li.button.tabs-title.is-active a{color:#fff}
@@ -55,7 +55,7 @@ a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:bloc
 .wp-caption.alignright{margin:5px 0 20px 20px}.wp-caption img{border:0 none;height:auto;margin:0;max-width:98.5%;padding:0;width:auto}
 .wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
-.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;top:5px;width:auto;z-index:100000}
 .eventcontainer .eventhumbnail{padding-top:12px;padding-left:0;padding-right:.5rem}
 .entry-footer{background:#fff}article{background:#fff}.gateway-header{padding:0}.sidebar-widget{padding-top:2.7rem}
 .breadcrumb-container{padding-top:20px;padding-left:2rem}a.button{margin:0 0 1rem 0}
@@ -137,11 +137,11 @@ a.skip-link.screen-reader-text:focus{position:static;width:auto;height:auto}ul{m
 td.gsc-clear-button{display:none}.ui-dialog{width:auto !important;max-width:600px}
 .ui-dialog .ui-dialog-titlebar-close span.ui-button-text{display:none}/*!
 Section 5: Navigation
-*/header nav a,header nav a:hover{font-size:.875rem;color:#fefefe;font-weight:700}
+*/header nav a,header nav a:hover,header nav a:focus{color:#fff;font-size:.875rem;font-weight:700}
 header ul#header-menu li a{font-size:.875rem;color:#fefefe;font-weight:700}header .menu:not(#menu-header-shortcuts):not(.vertical) li:hover,header .dropdown.menu .submenu{background:#0c3b78;border:0}
 header li.is-submenu-item{padding:.1rem 0;border-top:1px solid #0055a5}header .submenu{margin-top:-1px}
 header .submenu li{text-align:left}header .dropdown.menu .submenu li:hover{background:#fefefe !important;border-top:1px solid #0055a5 !important}
-header .dropdown.menu .submenu li:hover a{color:#0c3b78}header li.is-submenu-item:not(.is-drilldown-submenu-item) a{color:#fefefe;font-size:.85rem}
+header .dropdown.menu .submenu li:hover a{color:#0c3b78}header li.is-submenu-item:not(.is-drilldown-submenu-item) a,header li.is-submenu-item:not(.is-drilldown-submenu-item) a:hover,header li.is-submenu-item:not(.is-drilldown-submenu-item) a:focus{color:#fff;font-size:.85rem}
 header li.is-drilldown-submenu-item{padding:0}header .dropdown.menu .submenu.first-sub{left:-1rem}
 header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header .dropdown.menu>li.is-dropdown-submenu-parent>a::after{display:none}
 .medium-blue-bg{width:100%;background:#0055a5}li.divider:after{content:"|";color:#5593db}
@@ -164,7 +164,7 @@ header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header 
 .main-navigation .nav-menu>ul>li:first-child,.main-navigation .nav-menu>li:first-child{border-top:0}
 .main-navigation li{border-top:1px solid #eaeaea;border-top:1px solid rgba(51,51,51,0.1);position:relative;min-height:40px}
 .main-navigation a{padding:.5em 0}.main-navigation .menu-item-has-children>a{padding-right:38px}
-.dropdown-toggle:after{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-family:"Genericons";font-size:16px;font-style:normal;font-weight:normal;font-variant:normal;line-height:1;speak:none;text-align:center;text-decoration:inherit;text-transform:none;vertical-align:top}
+.dropdown-toggle:after{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-family:"Genericons";font-size:16px;font-style:normal;font-weight:normal;font-variant:normal;line-height:1;speak:none;text-align:center;text-transform:none;vertical-align:top}
 ul.nav-menu li.current-menu-item ul.sub-menu{display:block}.main-navigation ul .toggled-on{display:block}
 .dropdown-toggle{background-color:transparent;border:0;-webkit-box-sizing:content-box;box-sizing:content-box;content:"";height:42px;padding:0;position:absolute;text-transform:lowercase;top:3px;right:0;width:42px}
 .dropdown-toggle:after{color:#333;content:"\f431";font-size:24px;line-height:42px;position:relative;top:0;left:1px;width:42px}
@@ -178,13 +178,11 @@ ul.nav-menu li.current-menu-item ul.sub-menu{display:block}.main-navigation ul .
 ul.sub-menu{padding-top:15px}nav#site-navigation{padding-bottom:20px}#menu-header-shortcuts a:hover{text-decoration:underline}
 /*!
 Section 6: Footer
-*/footer{margin-top:5rem;background:#0c3b78;padding:2rem 0 4rem 0;font-size:.75rem}
+*/footer a{text-decoration:underline}footer{margin-top:5rem;background:#0c3b78;padding:2rem 0 4rem 0;font-size:.75rem}
 footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:700}
 footer .menu>li>a{padding:0 .25rem 0 0}footer a,footer p{color:#fefefe;font-size:.75rem}
 footer a:hover{color:#fff}footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}
-footer ul li{margin-bottom:.75rem}footer .underline>li>a{text-decoration:none}footer .underline>li>a:hover,a:hover{text-decoration:underline}
-.footer-sm-links{margin-bottom:2rem}.website-feedback{margin:10px 0;float:left;width:100%}
-.website-feedback a{text-decoration:none}.website-feedback a:hover{text-decoration:underline}
+footer ul li{margin-bottom:.75rem}.footer-sm-links{margin-bottom:2rem}.website-feedback{margin:10px 0;float:left;width:100%}
 li.current-menu-ancestor,li.current-menu-item{background:#dcdcdc}.main-navigation ul>li.current-menu-ancestor>ul>li{border-top:1px solid #fff}
 .main-navigation ul>li.current-menu-ancestor>ul>li.current-menu-item>a{font-weight:bold}
 /*! Ryan's Updated Menu Styling */.breadcrumb-container{padding:2rem .9375rem !important;font-size:.8125rem !important}
